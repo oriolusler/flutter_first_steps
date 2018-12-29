@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'layoutWidget.dart';
 
 class LayoutApp extends StatelessWidget {
   @override
@@ -14,36 +15,13 @@ class LayoutApp extends StatelessWidget {
           child: new Center(
             child: new Column(
               children: <Widget>[
-                new Text('first message'),
-                new Text('second message'),
-                new Text('third message'),
-                new Text('fourth message'),
+                new SimpleLayoutWidget(),
                 new Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    new Container(
-                      padding: const EdgeInsets.all(5.0),
-                      child: new Column(
-                        children: <Widget>[
-                          new Text('1'),
-                          new Text('2'),
-                          new Text('3'),
-                          new Text('4'),
-                        ],
-                      ),
-                    ),
-                    new Container(
-                      padding: const EdgeInsets.all(5.0),
-                      child: new Column(
-                        children: <Widget>[
-                          new Text('1'),
-                          new Text('2'),
-                          new Text('3'),
-                          new Text('4'),
-                        ],
-                      ),
-                    )
+                    new SimpleLayoutWidget(),
+                    new SimpleLayoutWidget(),
                   ],
                 )
               ],
